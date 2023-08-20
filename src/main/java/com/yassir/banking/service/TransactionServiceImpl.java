@@ -2,6 +2,7 @@ package com.yassir.banking.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yassir.banking.entity.AccountEntity;
@@ -12,6 +13,7 @@ import com.yassir.banking.repository.TransactionRepository;
 @Service
 public class TransactionServiceImpl implements ITransactionService {
 
+	@Autowired
 	public TransactionServiceImpl(final TransactionRepository txRepo) {
 		this.txRepo = txRepo;
 	}

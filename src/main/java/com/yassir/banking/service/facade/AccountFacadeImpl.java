@@ -2,6 +2,7 @@ package com.yassir.banking.service.facade;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yassir.banking.dto.BalanceDto;
@@ -21,6 +22,7 @@ import com.yassir.banking.service.ITransactionService;
 @Service
 public class AccountFacadeImpl implements IAccountFacade {
 
+	@Autowired
 	public AccountFacadeImpl(final IBalanceService balanceService, final IAccountService accountService,
 			final ITransactionService transactionService) {
 		this.balanceService = balanceService;
